@@ -8,10 +8,14 @@
     width: 100%;
 }
 
+.card-title{
+    text-align: center;
+}
+
 .pokemon-list-container{
-    width: 60%;
+    width: 70%;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    margin : auto;
     border : 3px solid orange;
 }

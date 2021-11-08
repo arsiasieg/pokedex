@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Pokemon } from 'src/app/shared/models/Pokemon.model';
 
 @Component({
@@ -8,10 +8,15 @@ import { Pokemon } from 'src/app/shared/models/Pokemon.model';
 })
 export class PokemonListComponent implements OnInit {
   @Input() pokemonList: Pokemon[]|undefined
+  @Output() emitPokemonDetails: EventEmitter<Pokemon> = new EventEmitter<Pokemon>()
 
   constructor(){ }
 
   ngOnInit(): void {
+  }
+
+  sendPokemonDetails(pokemon: Pokemon){
+    this.emitPokemonDetails.emit(pokemon)
   }
 
 }

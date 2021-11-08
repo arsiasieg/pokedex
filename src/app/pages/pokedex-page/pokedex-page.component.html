@@ -1,1 +1,2 @@
-<app-pokemon-list [pokemonList]="listPokemon"></app-pokemon-list>
+<app-pokemon-list [pokemonList]="listPokemon" (emitPokemonDetails)="retrievePokemonDetails($event)"></app-pokemon-list>
+<app-pokemon-details [pokemonDetails]="pokemonDetails"></app-pokemon-details>

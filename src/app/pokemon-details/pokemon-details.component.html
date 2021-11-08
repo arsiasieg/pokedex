@@ -1,1 +1,9 @@
-<p>pokemon-details works!</p>
+<h1>POKEMON INFORMATION</h1>
+<p *ngIf="pokemonDetails != undefined; else noPokemonDetails">
+    <img src="{{pokemonDetails.url}}" alt="">
+    ID : {{pokemonDetails.id}}<br>
+    Name : {{pokemonDetails.name}}<br>
+    Description : {{pokemonDetails.description}}<br>
+</p>
+
+<ng-template #noPokemonDetails>You can find the Pokemon informations here. Click on one of them !</ng-template>
