@@ -1,0 +1,13 @@
+<div *ngIf="pokemonList != undefined" class="pokemon-list-container">
+    <div *ngFor="let pokemon of pokemonList">
+        <div class="card">
+            <img src="{{pokemon.url}}" class="card-img-top" alt="{{pokemon.name}} image">
+            <div class="card-body">
+              <h5 class="card-title">{{pokemon.name}} image</h5>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
