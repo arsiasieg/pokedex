@@ -12,12 +12,13 @@ export class PokedexPageComponent implements OnInit {
   pokemonDetails : Pokemon|undefined
 
   constructor(public pokedexService: PokedexService) {
-    this.listPokemon = []
+    this.listPokemon = this.pokedexService.pokedex
    }
 
   ngOnInit(): void {
     this.listPokemon = this.pokedexService.getPokemon()
   }
+  
   retrievePokemonDetails(pokemon : Pokemon){
     this.pokemonDetails = pokemon
   }

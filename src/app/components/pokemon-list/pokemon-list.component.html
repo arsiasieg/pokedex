@@ -6,6 +6,8 @@
               <h5 class="card-title">{{pokemon.id}} - {{pokemon.name|uppercase}}</h5>
             </div>
           </div>
+          <button (click)="sendPokemonDetails(pokemon)">More informations</button>
+          <button (click)="deletePokemon(pokemon)">Delete</button>
     </div>
 </div>
 

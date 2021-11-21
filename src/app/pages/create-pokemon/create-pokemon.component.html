@@ -1,0 +1,9 @@
+<form #pokemonForm ="ngForm" (ngSubmit)="pokemonForm.valid && createPokemon()">
+    <label for="pokemonName">Name : </label>
+    <input type="text" name="pokemonName" [(ngModel)]="namePokemon" required>
+    <label for="pokemonUrl">Image : </label>
+    <input type="text" name="pokemonUrl" [(ngModel)]="urlPokemon" required>
+    <label for="pokemonDescription">Description : </label>
+    <input type="text" name="pokemonDescription" [(ngModel)]="descriptionPokemon" required>
+    <button type="submit" [disabled]="pokemonForm.invalid">Add</button>
+</form>

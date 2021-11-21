@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Pokemon } from 'src/app/shared/models/Pokemon.model';
+import { PokedexService } from 'src/app/shared/services/pokedex.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -10,13 +11,17 @@ export class PokemonListComponent implements OnInit {
   @Input() pokemonList: Pokemon[]|undefined
   @Output() emitPokemonDetails: EventEmitter<Pokemon> = new EventEmitter<Pokemon>()
 
-  constructor(){ }
+  constructor(private pokedexService : PokedexService){ }
 
   ngOnInit(): void {
   }
 
   sendPokemonDetails(pokemon: Pokemon){
     this.emitPokemonDetails.emit(pokemon)
+  }
+
+  deletePokemon(pokemon: Pokemon){
+    this.pokedexService.deletePokemon(pokemon)
   }
 
 }
