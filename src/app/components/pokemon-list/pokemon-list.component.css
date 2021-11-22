@@ -1,19 +1,41 @@
 .card{
-    width : 10rem;
-    margin : 1rem;
+    width : 13rem;
+    margin: 1rem;
+}
+
+.card:hover{
+    animation: cardHover 300ms ease-in-out;
+}
+
+@keyframes cardHover {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+h5{
+    margin: 1rem 0;
+}
+
+h6{
+    margin : 0;
 }
 
 .card-img-top{
     width: 100%;
 }
 
-.card-title{
-    text-align: center;
+.displayBetween{
+    display: flex;
+    justify-content: space-between;
 }
 
 .pokemon-list-container{
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-    margin : auto;
+    margin: 1rem 3rem;
 }
