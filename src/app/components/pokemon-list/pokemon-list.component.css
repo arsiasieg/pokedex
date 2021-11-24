@@ -1,6 +1,7 @@
 .card{
     width : 13rem;
     margin: 1rem;
+    box-shadow: 2px 2px 5px silver;
 }
 
 .card:hover{
@@ -12,16 +13,20 @@
         transform: translateY(0);
     }
     50%{
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
 }
 
 h5{
-    margin: 1rem 0;
+    margin: .5rem 0;
 }
 
 h6{
     margin : 0;
+}
+
+.btn{
+    font-size: .7rem;
 }
 
 .card-img-top{
@@ -30,7 +35,8 @@ h6{
 
 .displayBetween{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-bottom: .5rem;
 }
 
 .pokemon-list-container{

@@ -1,2 +1,7 @@
 <app-pokemon-list [pokemonList]="listPokemon" (emitPokemonDetails)="retrievePokemonDetails($event)"></app-pokemon-list>
-<app-pokemon-details [pokemonDetails]="pokemonDetails"></app-pokemon-details>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-body">
+        <app-pokemon-details [pokemonDetails]="pokemonDetails"></app-pokemon-details>
+    </div>
+  </div>

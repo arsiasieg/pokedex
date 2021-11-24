@@ -3,11 +3,11 @@
         <div class="card" (click)="sendPokemonDetails(pokemon)">
           <img src="{{pokemon.url}}" class="card-img-top" alt="{{pokemon.name}} image">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">N°{{pokemon.id}}</h6>
+            <h6 class="card-subtitle text-muted">N°{{pokemon.id}}</h6>
             <h5 class="card-title">{{pokemon.name|uppercase}}</h5>
           </div>
           <div class="displayBetween">
-            <button class="btn btn-primary" (click)="sendPokemonDetails(pokemon)">Informations</button>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" (click)="sendPokemonDetails(pokemon)">Informations</button>
             <button class="btn btn-primary" (click)="deletePokemon(pokemon)">Delete</button>
           </div>
         </div>

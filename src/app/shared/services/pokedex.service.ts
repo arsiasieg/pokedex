@@ -26,10 +26,8 @@ export class PokedexService {
   }
 
   deletePokemon(pokemon : Pokemon){
-    console.log("Id du pokemon à supp :" + pokemon.id)
-    for (let i=1; i < this.pokedex.length; i++){
+    for (let i=0; i < this.pokedex.length; i++){
       if (this.pokedex[i].id == pokemon.id)
-        console.log("Index dans le tableau : " + i)
         this.pokedex.splice(i, 1)
     }
   }
