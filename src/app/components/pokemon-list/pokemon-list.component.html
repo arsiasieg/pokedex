@@ -1,14 +1,9 @@
 <div *ngIf="pokemonList != undefined" class="pokemon-list-container">
     <div *ngFor="let pokemon of pokemonList">
-        <div class="card" (click)="sendPokemonDetails(pokemon)">
+        <div class="pokemonCard" (click)="sendPokemonDetails(pokemon)">
           <img src="{{pokemon.url}}" class="card-img-top" alt="{{pokemon.name}} image">
           <div class="card-body">
-            <h6 class="card-subtitle text-muted">N°{{pokemon.id}}</h6>
             <h5 class="card-title">{{pokemon.name|uppercase}}</h5>
-          </div>
-          <div class="displayBetween">
-            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" (click)="sendPokemonDetails(pokemon)">Informations</button>
-            <button class="btn btn-primary" (click)="deletePokemon(pokemon)">Delete</button>
           </div>
         </div>
     </div>

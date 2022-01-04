@@ -1,3 +1,10 @@
-.offcanvas{
-    box-shadow: -2px 2px 10px silver;
+app-pokemon-list{
+    flex : 1.5;
+    height: 80vh;
+    overflow: auto;
+}
+
+app-pokemon-details{
+    margin-left : 5rem;
+    flex : 1;
 }

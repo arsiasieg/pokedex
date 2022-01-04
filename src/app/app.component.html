@@ -1,12 +1,14 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="../assets/img/pokedex.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top">
-        Bootstrap
+      <a class="navbar-brand" routerLink="">
+        <img src="../assets/img/pokedexLogo.png" alt="" width="auto" height="70" class="d-inline-block align-text-top">
       </a>
+      <div class="menu">
+        <a routerLink="/create">Create your pokemon</a>
+        <a routerLink="/pokedex">Pokedex</a>
+      </div>
     </div>
   </nav>
 
-<button routerLink="/create">Create your pokemon</button>
-<button routerLink="/pokedex">Pokedex</button>
+
 <router-outlet></router-outlet>

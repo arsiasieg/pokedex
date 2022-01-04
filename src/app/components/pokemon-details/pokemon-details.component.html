@@ -1,11 +1,13 @@
-<h1>POKEMON INFORMATION</h1>
 <div *ngIf="pokemonDetails != undefined; else noPokemonDetails">
-    <img src="{{pokemonDetails.url}}" alt="">
-    <div>
+    <div class="description">
         <p>ID : {{pokemonDetails.id}}</p>
         <p>Name : {{pokemonDetails.name}}</p>
-        <p>Description : {{pokemonDetails.description}}</p>
+        <p class="text-justify">Description : {{pokemonDetails.description}}</p>
+        <button class="btn btn-primary" (click)="deletePokemon(pokemonDetails)">Delete</button>
     </div>
+    <div class="image-container" style="background-image: url('{{pokemonDetails.url}}')">
+    </div>
+    
 </div>
 
-<ng-template #noPokemonDetails>You can find the Pokemon informations here. Click on one of them !</ng-template>
+<ng-template #noPokemonDetails class="noPokemonDetails">You can find the Pokemon informations here. Click on one of them !</ng-template>

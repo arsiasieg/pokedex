@@ -1,8 +1,40 @@
-h1{
-    font-size: 1rem;
+.image-container{
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position-x: 100px;
+    animation : check 300ms linear;
 }
 
-img{
-    width: 50%;
-    margin : auto;
+@keyframes check{
+    0%,50%,100%{
+        transform: translateY(0);
+    }
+    25%, 75%{
+        transform: translateY(-10px);
+    }
+}
+
+.image-container img{
+    width: 110%;
+    height: auto;
+}
+
+
+h1{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.text-justify{
+    text-align: justify;
+}
+
+.noPokemonDetails{
+    background-color : blue;
 }
