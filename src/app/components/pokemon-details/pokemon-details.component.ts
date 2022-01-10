@@ -14,6 +14,15 @@ export class PokemonDetailsComponent {
   
   deletePokemon(pokemon: Pokemon){
     this.pokedexService.deletePokemon(pokemon)
+    this.pokemonDetails = undefined
+  }
+
+  playSound(sound:string){
+    console.log(sound)
+    let audio = new Audio();
+    audio.src = sound;
+    audio.load();
+    audio.play();
   }
 
 }

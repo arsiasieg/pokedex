@@ -17,12 +17,7 @@ export class PokemonListComponent implements OnInit {
   }
 
   sendPokemonDetails(pokemon: Pokemon){
-    console.log(pokemon)
     this.emitPokemonDetails.emit(pokemon)
-  }
-
-  deletePokemon(pokemon: Pokemon){
-    this.pokedexService.deletePokemon(pokemon)
   }
 
 }

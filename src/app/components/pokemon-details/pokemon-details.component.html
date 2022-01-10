@@ -3,11 +3,13 @@
         <p>ID : {{pokemonDetails.id}}</p>
         <p>Name : {{pokemonDetails.name}}</p>
         <p class="text-justify">Description : {{pokemonDetails.description}}</p>
+        <p>Type : </p><div *ngFor="let type of pokemonDetails.type">{{type|uppercase}} </div>
         <button class="btn btn-primary" (click)="deletePokemon(pokemonDetails)">Delete</button>
     </div>
-    <div class="image-container" style="background-image: url('{{pokemonDetails.url}}')">
+    <div>
+        <img class="image-container" src="{{pokemonDetails.url}}" alt="{{pokemonDetails.name}}'s image" (mouseenter)="playSound(pokemonDetails.sound)">
     </div>
-    
+
 </div>
 
 <ng-template #noPokemonDetails class="noPokemonDetails">You can find the Pokemon informations here. Click on one of them !</ng-template>

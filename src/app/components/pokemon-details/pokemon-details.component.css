@@ -1,12 +1,14 @@
 .image-container{
-    width: 30%;
-    height: 50%;
+    width: 25%;
+    height: auto;
     position: absolute;
     bottom: 0;
     right: 0;
     background-repeat: no-repeat;
     background-size: 105%;
-    background-position-x: 100px;
+}
+
+.image-container:hover{
     animation : check 300ms linear;
 }
 
@@ -17,11 +19,6 @@
     25%, 75%{
         transform: translateY(-10px);
     }
-}
-
-.image-container img{
-    width: 110%;
-    height: auto;
 }
 
 
@@ -37,4 +34,5 @@ h1{
 
 .noPokemonDetails{
     background-color : blue;
+    white-space: normal
 }
