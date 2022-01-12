@@ -37,6 +37,7 @@ export class CreatePokemonComponent {
   }
 
   createPokemon(){
+    console.log(this.urlPokemon)
     this.pokedexService.addPokemon(this.namePokemon, this.urlPokemon, this.descriptionPokemon, this.soundPokemon, this.typePokemon)
     this.pokemonAdded = true
   }

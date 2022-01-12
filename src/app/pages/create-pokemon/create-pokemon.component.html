@@ -1,39 +1,55 @@
-<label for="pokemonType">Type : </label>
-<select id="selectType" [(ngModel)]="selectedType" (change)="addType(selectedType)">
-    <option value="Acier">Acier</option>
-    <option value="Combat">Combat</option>
-    <option value="Dragon">Dragon</option>
-    <option value="Eau">Eau</option>
-    <option value="Electrick">Électrick</option>
-    <option value="Feu">Feu</option>
-    <option value="Fee">Fée</option>
-    <option value="Insect">Insecte</option>
-    <option value="Normal">Normal</option>
-    <option value="Plante">Plante</option>
-    <option value="Poison">Poison</option>
-    <option value="Psy">Psy</option>
-    <option value="Roche">Roche</option>
-    <option value="Sol">Sol</option>
-    <option value="Specte">Specte</option>
-    <option value="Tenebres">Ténèbres</option>
-    <option value="Vol">Vol</option>
-</select>
-<div *ngFor="let type of typePokemon">
-    {{type}} <button (click)="deleteType(type)">X</button>
+<div class="container">
+    <h1>Créer votre pokémon !</h1>
+    <div>
+        <select class="form-control mb-3" id="selectType" [(ngModel)]="selectedType" (change)="addType(selectedType)">
+            <option value="" selected disabled>-- Type du pokémon --</option>
+            <option value="Acier">Acier</option>
+            <option value="Combat">Combat</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Eau">Eau</option>
+            <option value="Electrick">Électrick</option>
+            <option value="Feu">Feu</option>
+            <option value="Fee">Fée</option>
+            <option value="Glace">Glace</option>
+            <option value="Insect">Insecte</option>
+            <option value="Normal">Normal</option>
+            <option value="Plante">Plante</option>
+            <option value="Poison">Poison</option>
+            <option value="Psy">Psy</option>
+            <option value="Roche">Roche</option>
+            <option value="Sol">Sol</option>
+            <option value="Specte">Specte</option>
+            <option value="Tenebres">Ténèbres</option>
+            <option value="Vol">Vol</option>
+        </select>
+        <div *ngFor="let type of typePokemon">
+            {{type}} <button (click)="deleteType(type)">X</button>
+        </div>
+    </div>
+    
+    
+    <form #pokemonForm ="ngForm" (ngSubmit)="pokemonForm.valid && createPokemon()">
+        <div class="form-group">
+            <input type="text" class="form-control mb-3" name="pokemonName" [(ngModel)]="namePokemon" required placeholder="Nom du pokémon">
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="form-group">
+                <label for="pokemonUrl">Image</label>
+                <input type="file" class="form-control-file mb-3" name="pokemonUrl" [(ngModel)]="urlPokemon" required>
+            </div>
+            <div class="form-group">
+                <label for="pokemonSound">Chant</label>
+                <input type="file" class="form-control-file mb-3" name="pokemonSound" [(ngModel)]="soundPokemon">
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control mb-3" name="pokemonDescription" [(ngModel)]="descriptionPokemon" required placeholder="Description">
+        </div>
+        <button type="submit" [disabled]="pokemonForm.invalid">Add</button>
+    </form>
+    
+    
+    
+    <p *ngIf="pokemonAdded">{{namePokemon}} a été ajouté !</p>
+    
 </div>
-
-<form #pokemonForm ="ngForm" (ngSubmit)="pokemonForm.valid && createPokemon()">
-    <label for="pokemonName">Name : </label>
-    <input type="text" name="pokemonName" [(ngModel)]="namePokemon" required>
-    <label for="pokemonUrl">Image : </label>
-    <input type="text" name="pokemonUrl" [(ngModel)]="urlPokemon" required>
-    <label for="pokemonDescription">Description : </label>
-    <input type="text" name="pokemonDescription" [(ngModel)]="descriptionPokemon" required>
-    <label for="pokemonSound">Cri : </label>
-    <input type="text" name="pokemonSound" [(ngModel)]="soundPokemon">
-    <button type="submit" [disabled]="pokemonForm.invalid">Add</button>
-</form>
-
-
-
-<p *ngIf="pokemonAdded">{{namePokemon}} a été ajouté !</p>

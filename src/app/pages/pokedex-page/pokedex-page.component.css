@@ -7,4 +7,5 @@ app-pokemon-list{
 app-pokemon-details{
     margin-left : 5rem;
     flex : 1;
+    position: relative;
 }

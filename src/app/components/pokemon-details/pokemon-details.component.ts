@@ -18,9 +18,9 @@ export class PokemonDetailsComponent {
   }
 
   playSound(sound:string){
-    console.log(sound)
     let audio = new Audio();
     audio.src = sound;
+    audio.volume = 0.3;
     audio.load();
     audio.play();
   }
